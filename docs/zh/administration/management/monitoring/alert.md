@@ -20,12 +20,11 @@ toc_max_heading_level: 4
 **PromSQL**
 
 ```Plain
-count(up{group="fe", job="$job_name"}) >= 3
+count(up{group="fe", job="$job_name"} == 0) > 0
 ```
 
 **报警描述**
-
-当存活的 FE 节点个数小于该值时发送报警。您可以根据实际 FE 节点个数调整。
+当 FE 节点有处于不可用状态时发送报警。
 
 **处理办法**
 
