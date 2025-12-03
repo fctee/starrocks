@@ -20,7 +20,7 @@ toc_max_heading_level: 4
 **PromSQL**
 
 ```Plain
-count(up{group="fe", job="$job_name"}) >= 3
+count(up{group="fe", job="$job_name"}) < 3
 ```
 
 **报警描述**
